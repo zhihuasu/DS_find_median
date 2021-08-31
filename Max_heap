@@ -2,7 +2,7 @@ class MaxHeap:
     def __init__(self):
         self.H=[None]
     def size(self):
-        return len(self.H)
+        return len(self.H)-1
     def __repr__(self):
         return str(self.H)
     def satisfies_assertion(self):
@@ -49,7 +49,7 @@ class MaxHeap:
             self.H[rchild_idx]=tmp
             self.bubble_down(rchild_idx)
     ## function: heap_insert, using bubble_up and bubble_down function
-    def insert(elt):
+    def insert(self,elt):
         self.H.append(elt)
         self.bubble_up(len(self.H)-1)
     ## function: heap_delete_max, delete maximum element in the heap, using bubble_up and bubble_down
